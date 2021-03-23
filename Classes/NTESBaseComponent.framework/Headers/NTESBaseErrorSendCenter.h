@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "NTESBaseLDCollectModel.h"
 #import "NTESBaseQPCollectModel.h"
+#import "NTESBaseLDCollectModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
