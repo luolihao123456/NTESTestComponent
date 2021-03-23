@@ -8,17 +8,19 @@
 
 #import <Foundation/Foundation.h>
 
+#define NTESBASEESDKVERSION @"1.0"
+
 typedef NS_ENUM(NSUInteger, NTESSendErrorEnvironment) {
     NTESSendErrorEnvironmentTest, // 测试环境
     NTESSendErrorEnvironmentOnline, // 线上环境
 };
 
-typedef NS_ENUM(NSInteger, NTESQPOperatorType) {
-    NTESQPOperatorTypeCT = 1,
-    NTESQPOperatorTypeCM,
-    NTESQPOperatorTypeCU,
-    NTESQPOperatorTypeNone,
-    NTESQPOperatorTypeOK,
+typedef NS_ENUM(NSInteger, NTESBaseQPOperatorType) {
+    NTESBaseQPOperatorTypeCT = 1,
+    NTESBaseQPOperatorTypeCM,
+    NTESBaseQPOperatorTypeCU,
+    NTESBaseQPOperatorTypeNone,
+    NTESBaseQPOperatorTypeOK,
 };
 
 NS_ASSUME_NONNULL_BEGIN
@@ -48,7 +50,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) NTESSendErrorEnvironment environment;
 
 // 运营商类型
-@property (nonatomic, assign) NTESQPOperatorType ot;
+@property (nonatomic, assign) NTESBaseQPOperatorType ot;
 
 // 运行环境
 @property (nonatomic, strong) NSNumber *envType;

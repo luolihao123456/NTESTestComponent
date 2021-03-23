@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "NTESLDCollectModel.h"
-#import "NTESQPCollectModel.h"
+#import "NTESBaseLDCollectModel.h"
+#import "NTESBaseQPCollectModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -17,12 +17,12 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  活体检测数据模型
  */
-@property (nonatomic, strong) NTESLDCollectModel *collectModel;
+@property (nonatomic, strong) NTESBaseLDCollectModel *collectModel;
 
 /**
  号码认证数据模型
  */
-@property (nonatomic, strong) NTESQPCollectModel *collectQPModel;
+@property (nonatomic, strong) NTESBaseQPCollectModel *collectQPModel;
 
 + (NTESBaseErrorSendCenter *)sharedInstance;
 
@@ -60,8 +60,8 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param      requestTime   请求时间
  *  @param      requestURL     请求地址
  */
-- (void)collectQLErrorType:(NTESQPErrorType)errorType
-             monitorType:(NTESQPMonitorType)monitorType
+- (void)collectQLErrorType:(NTESBaseQPErrorType)errorType
+             monitorType:(NTESBaseQPMonitorType)monitorType
                  message:(NSString *)message
                     code:(NSNumber *)code
                 httpCode:(NSNumber *)httpCode
@@ -79,8 +79,8 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param      requestTime   请求时间
  *  @param      requestURL     请求地址
  */
-- (void)collectQPErrorType:(NTESQPErrorType)errorType
-             monitorType:(NTESQPMonitorType)monitorType
+- (void)collectQPErrorType:(NTESBaseQPErrorType)errorType
+             monitorType:(NTESBaseQPMonitorType)monitorType
                  message:(NSString *)message
                     code:(NSNumber *)code
                 httpCode:(NSNumber *)httpCode
